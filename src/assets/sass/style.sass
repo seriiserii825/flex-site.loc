@@ -1,0 +1,43 @@
+@import partials/variables
+@import partials/mixins
+
+body
+  background: $gray
+
+.container
+  padding: 40px
+  margin: 0 auto
+  max-width: 1200px
+
+  .box
+    +border-radius(10px)
+
+    display: inline-block
+    margin: 20px
+    width: 100px
+    height: 100px
+    font-size: 20px
+    font-weight: bold
+    border-width: 4px
+    border-style: solid
+    transition: all .5s ease
+
+.message
+  padding: 10px
+  color: teal
+  background: orange
+
+.error
+  @extend .message
+
+  border-color: red
+
+.danger
+  @extend .message
+
+  border-color: magenta
+
+.succes
+  @extend .message
+
+  border-color: green
